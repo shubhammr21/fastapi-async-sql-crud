@@ -1,0 +1,68 @@
+{
+  "debug.internalConsoleOptions": "neverOpen",
+  "docwriter.style": "Google",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true,
+      "source.fixAll.ruff": true,
+      "source.organizeImports.ruff": true
+    }
+  },
+  "files.associations": {
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.gotoDefinitionInStringLiteral": true,
+  "ruff.organizeImports": false,
+  "isort.args": ["--profile", "black"],
+  "editor.rulers": [80, 120],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.pyc": true
+  },
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "local": {
+      "version": "v2",
+      "baseUrl": "http://localhost:8000"
+    }
+  },
+  "cSpell.words": [
+    "allauth",
+    "authtoken",
+    "autoupdate",
+    "corsheaders",
+    "djlint",
+    "DJRA",
+    "fastapi",
+    "fundsdb",
+    "huggingface",
+    "invenics",
+    "isort",
+    "jsonable",
+    "ODBC",
+    "onupdate",
+    "pydantic",
+    "pyupgrade",
+    "sessionmaker",
+    "simplejwt",
+    "socialaccount",
+    "sqlalchemy",
+    "starlette",
+    "staticfiles",
+    "structlog",
+    "tracklead",
+    "TYPESENSE",
+    "venv"
+  ]
+}

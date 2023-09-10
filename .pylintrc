@@ -1,0 +1,25 @@
+[MESSAGES CONTROL]
+disable = C0114, C0115, C0116, R0903, R0913, R0914, R0915, W0613, W1401
+
+[DESIGN]
+max-attributes=20
+max-args=10
+max-parents=7
+max-locals=25
+
+[BASIC]
+good-names=i,j,k,e,ex, _
+bad-names=foo,bar,baz,toto,tutu,tata
+
+[FORMAT]
+max-line-length=120
+
+[VARIABLES]
+init-import=yes
+
+[SIMILARITIES]
+min-similarity-lines=10
+ignore-comments=yes
+ignore-docstrings=yes
+
+init-hook='import sys; sys.path.append("src")'

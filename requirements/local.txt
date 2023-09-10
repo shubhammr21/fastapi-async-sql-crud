@@ -1,0 +1,13 @@
+-r base.txt
+autopep8==2.0.4
+black==23.7.0
+coverage==7.3.0
+factory-boy==3.3.0
+flake8==6.1.0
+flake8-isort==6.0.0
+ipdb==0.13.13
+mypy==1.5.1
+mypy-extensions==1.0.0
+pre-commit==3.4.0
+pytest==7.4.1
+pytest-sugar==0.9.7

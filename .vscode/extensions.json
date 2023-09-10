@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+    "charliermarsh.ruff",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "Gruntfuggly.todo-tree",
+    "mechatroner.rainbow-csv",
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-python.pylint",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode.makefile-tools",
+    "unifiedjs.vscode-mdx"
+  ]
+}

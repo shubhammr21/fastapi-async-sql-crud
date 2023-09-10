@@ -1,0 +1,76 @@
+{
+  "name": "fundsdb_backend",
+  "dockerComposeFile": ["../docker-compose.dev.yml"],
+  "init": true,
+  "mounts": [
+    {
+      "source": "./.devcontainer/bash_history",
+      "target": "/home/dev-user/.bash_history",
+      "type": "bind"
+    },
+    {
+      "source": "/tmp",
+      "target": "/tmp",
+      "type": "bind"
+    },
+    {
+      "source": "~/.ssh",
+      "target": "/home/dev-user/.ssh",
+      "type": "bind"
+    }
+  ],
+  "overrideCommand": false,
+  "service": "backend",
+  "remoteUser": "dev-user",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "[python]": {
+          "analysis.autoImportCompletions": true,
+          "analysis.typeCheckingMode": "basic",
+          "defaultInterpreterPath": "/usr/local/bin/python",
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+          },
+          "formatting.blackPath": "/usr/local/bin/black",
+          "formatting.provider": "black",
+          "languageServer": "Pylance",
+          "linting.enabled": true,
+          "linting.flake8Enabled": true,
+          "linting.flake8Path": "/usr/local/bin/flake8",
+          "linting.mypyEnabled": true,
+          "linting.mypyPath": "/usr/local/bin/mypy",
+          "linting.pycodestylePath": "/usr/local/bin/pycodestyle",
+          "linting.pylintEnabled": true,
+          "linting.pylintPath": "/usr/local/bin/pylint",
+          "analysis.autoFormatStrings": true,
+          "analysis.gotoDefinitionInStringLiteral": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.makefile-tools",
+        "EditorConfig.EditorConfig",
+        "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "Gruntfuggly.todo-tree",
+        "mechatroner.rainbow-csv",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml",
+        "unifiedjs.vscode-mdx",
+        "davidanson.vscode-markdownlint",
+        "mrmlnc.vscode-duplicate",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "batisteo.vscode-django"
+      ]
+    }
+  },
+  "postCreateCommand": "cat .devcontainer/bashrc.override.sh >> ~/.bashrc"
+}
