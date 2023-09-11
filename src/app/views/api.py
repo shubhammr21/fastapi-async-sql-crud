@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from .views import notes, ping
+from app.views import notes, ping
 
 api_router = APIRouter()
 

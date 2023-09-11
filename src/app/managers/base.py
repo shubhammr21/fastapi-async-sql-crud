@@ -4,13 +4,15 @@ from typing import Any, Generic, TypeVar
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from app.db.base_class import Base
 
 ModelType = TypeVar("ModelType", bound=Base)
 CreateSchemaType = TypeVar("CreateSchemaType", bound=BaseModel)
 UpdateSchemaType = TypeVar("UpdateSchemaType", bound=BaseModel)
+
+AsyncSessionContext = async_sessionmaker[AsyncSession]
 
 
 class BaseManager(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):

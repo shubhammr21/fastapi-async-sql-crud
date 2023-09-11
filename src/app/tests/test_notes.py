@@ -3,7 +3,7 @@ import json
 import pytest
 from utils import status
 
-from app.api import crud
+from app.routers import crud
 
 
 def test_create_note(test_app, monkeypatch):
