@@ -25,8 +25,6 @@ from app.db.base import Base  # noqa
 
 target_metadata = Base.metadata
 
-# target_metadata = None
-
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

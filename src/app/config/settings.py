@@ -3,8 +3,6 @@ import secrets
 from pydantic import AnyHttpUrl, Field, PostgresDsn
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-# from typing import Union
-
 
 class Settings(BaseSettings):
     api_prefix: str = "/api/v1"
@@ -14,14 +12,6 @@ class Settings(BaseSettings):
     project_name: str
     pg_dsn: PostgresDsn
 
-    # @validator("backend_cors_origins", pre=True)
-    # def assemble_cors_origins(cls, v: Union[str, list[str]]) -> Union[list[str], str]:
-    #     if isinstance(v, str) and not v.startswith("["):
-    #         return [i.strip() for i in v.split(",")]
-    #     elif isinstance(v, (list, str)):
-    #         return v
-    #     raise ValueError(v)
-
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
@@ -30,7 +20,7 @@ class Settings(BaseSettings):
     )
 
 
-settings = Settings()
+settings = Settings()  # type: ignore
 
 
 if __name__ == "__main__":

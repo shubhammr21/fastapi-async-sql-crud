@@ -20,8 +20,14 @@
   "python.analysis.autoFormatStrings": true,
   "python.analysis.gotoDefinitionInStringLiteral": true,
   "ruff.organizeImports": false,
-  "isort.args": ["--profile", "black"],
-  "editor.rulers": [80, 120],
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -64,5 +70,9 @@
     "tracklead",
     "TYPESENSE",
     "venv"
-  ]
+  ],
+  "sonarlint.connectedMode.project": {
+    "connectionId": "http-localhost-9080",
+    "projectKey": "LocalProject"
+  }
 }
